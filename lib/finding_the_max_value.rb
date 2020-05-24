@@ -1,15 +1,15 @@
 require 'pry'
 
-def find_max_value(array)
-  count = 0 
-  while count < array.length do
-    if array[count] == array.max 
-      return array[count]
-    end
-    count += 1
-    # binding.pry
-  end
-end
+# def find_max_value(array)
+#   count = 0 
+#   while count < array.length do
+#     if array[count] == array.max 
+#       return array[count]
+#     end
+#     count += 1
+#     # binding.pry
+#   end
+# end
 # //////////////////// 
 # lets solve without .max method 
 
@@ -24,3 +24,18 @@ end
 #   end
 #   max_value  # here by the end of the loop this will be the max value returned
 # end
+
+
+
+
+def find_max_value(array)
+  count = 0
+  min_value = array.max()
+  while count < array.length do
+   if min_value[count] > array[count]
+     min_value = array[count]
+   end
+   count += 1
+  end
+  min_value
+end
